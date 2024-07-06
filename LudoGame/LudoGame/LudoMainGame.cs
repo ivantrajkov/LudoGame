@@ -852,6 +852,17 @@ namespace LudoGame
 
         private void endTurnBtn_Click(object sender, EventArgs e)
         {
+             Player currentPlayer = players[currentPlayerIndex];
+
+             bool allPiecesAtHome = currentPlayer.pieces.All(piece => piece.isAtHome);
+             bool pieceAtEnd = currentPlayer.pieces.Any(piece => piece.isFinished);
+
+
+             if ((allPiecesAtHome && diceValue != 6) || (pieceAtEnd))
+             {
+                 moved = true;
+             }
+        
             if (!moved)
             {
                 MessageBox.Show("Play your turn first!");
