@@ -1,7 +1,18 @@
 # LudoGame
 Ludo project for the Visual Programming course in FCSE
 <p>
-  Created by Ivan Trajkov 221267, Dushan Tashev 221099, Teon Todorovski 221253
+  Created by:
+  <ul>
+    <li>
+       Ivan Trajkov 221267
+    </li>
+    <li>
+    Dushan Tashev 221099
+    </li>
+    <li>
+      Teon Todorovski 221253
+    </li>
+  </ul>
   </p>
 
 <h2>Опис на проблемот</h2>  
