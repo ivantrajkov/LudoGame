@@ -1,5 +1,5 @@
 # LudoGame
-Ludo project for the Visual Programming course in FCSE
+Ludo project in C#-Windows forms, for the Visual Programming course in FCSE
 <p>
   Created by:
   <ul>
