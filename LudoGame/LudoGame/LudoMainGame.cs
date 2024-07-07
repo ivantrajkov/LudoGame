@@ -368,7 +368,7 @@ namespace LudoGame
                     {
                         return;
                     }
-                    // string newPositionName = "position" + "Yellow" + newIndex;
+                    
                     string newPositionName = "positionG" + newIndex;
                     PictureBox newPositionPictureBox = this.Controls.Find(newPositionName, true).FirstOrDefault() as PictureBox;
                     if (newPositionPictureBox.Tag != null)
