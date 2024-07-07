@@ -179,6 +179,39 @@ private void checkWinner(List<PictureBox> homes, string playerName)
 <br>
 Исто така се чува passedHalf, која ни овозможува полесно да се имплементира вртењето на еден круг, и влегувањето во својата куќичка имајќи во предвид дека секоја боја има различен индекс и логика за влегување во својата куќичка.
 </p>
+<hr>
+<p>
+-Дел од кодот каде што се движиме внатре во финалните куќички:
+  
+  ```csharp
+  if (currentPlayer.name == "blue" && piece.isFinished)
+                {
+                    currentIndex = int.Parse(clickedPictureBox.Name.Substring(9));
+                    newIndex = currentIndex + diceValue;
+                    if ((currentIndex + diceValue) > 4)
+                    {
+                        return;
+                    }
+                    string newPositionName = "positionB" + newIndex;
+                    PictureBox newPositionPictureBox = this.Controls.Find(newPositionName, true).FirstOrDefault() as PictureBox;
+                    if (newPositionPictureBox.Tag != null)
+                    {
+                        return;
+                    }
+                    newPositionName = "positionB" + newIndex;
+                    newPositionPictureBox = this.Controls.Find(newPositionName, true).FirstOrDefault() as PictureBox;
+                    newPositionPictureBox.Tag = piece;
+                    string pieceImagePath = @"Assets\" + piece.color + "TilePiece.png";
+                    newPositionPictureBox.Image = Image.FromFile(pieceImagePath);
+                    clickedPictureBox.Tag = null;
+                    pieceImagePath = @"Assets\" + piece.color + "Tile.png";
+                    clickedPictureBox.Image = Image.FromFile(pieceImagePath);
+
+                }
+  ```
+-Овде користиме substring со цел да го добиеме индексот на pictureboxot, а потоа таа вредност ја додаваме со вредноста од коцката за да го добиеме новото поле.
+-На идентичен начин функционира и движењето низ целокупната табла, но со разлики во логиката и одредувањето на кој и каде, како може да се движи.
+</p>
 <h2>Стратегии:</h2>
 <p>
   <ul>
