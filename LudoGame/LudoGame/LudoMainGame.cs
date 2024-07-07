@@ -200,7 +200,7 @@ namespace LudoGame
                 {
                     int position = newIndex % 48;
                     string newPositionName = "positionY" + position;
-                   // currentPlayer.background = newPositionName;
+                   
 
                     PictureBox newPositionPictureBox = this.Controls.Find(newPositionName, true).FirstOrDefault() as PictureBox;
 
