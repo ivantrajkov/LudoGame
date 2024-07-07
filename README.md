@@ -51,7 +51,7 @@ Ludo project in C#-Windows forms, for the Visual Programming course in FCSE
   <br>
   <img src="images/dice_rolled.png" alt="Dice Image">
 </p>
-<h2>Код:</h2>
+<h2>Решение на дел од проблемите:</h2>
 <p>
 Функцијата каде се поставуваат фигурите според бројот на избрани играчи:
 
